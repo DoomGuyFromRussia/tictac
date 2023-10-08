@@ -11,7 +11,7 @@ def draw():
 def getInput():
     index = 0
     try:
-        index = int(input('enter index for your char'))
+        index = int(input('enter index for your char, enter something bad if you want to quit'))
         if 1 <= index <= 9:
             for i in range(0, 2):
                 for j in range(0,2):
@@ -22,8 +22,11 @@ def getInput():
                         print('this field is  already occupied')
         else:
             print('invalid value')
+            return 0
     except ValueError:
         print('invalid value')
+        return 0
 while True:
     draw()
-    getInput()
+    if not getInput():
+        break
