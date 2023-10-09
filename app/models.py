@@ -9,4 +9,8 @@ class Field:
         else:
             return self.char
 
+class Controller:
+    turn = 1
+    char = ''
+
 f = Field(1, '_', False)
