@@ -12,5 +12,6 @@ class Field:
 class Controller:
     turn = 1
     char = ''
+    occupied = 0
 
 f = Field(1, '_', False)
